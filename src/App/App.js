@@ -1,28 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button className="btn btn-danger">ellow!</button>
-      </header>
-    </div>
-  );
+import goats from './goats';
+
+import './App.scss';
+
+// similar to the words new promise
+// basic structure for component
+class App extends React.Component {
+  state = {
+    goats: [],
+  }
+
+  componentDidMount() {
+    this.setState({goats});
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div>Goat Yoga</div>
+        {/* <GoatCorral goats={goats}/> */}
+
+      </div>
+    );
+  }
 }
 
 export default App;
